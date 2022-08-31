@@ -50,7 +50,7 @@ END;;
 
 DROP PROCEDURE IF EXISTS `delete_group`;;
 CREATE PROCEDURE `delete_group`(IN `name` varchar(45) CHARACTER SET 'utf8')
-DELETE FROM `group` WHERE name = 'Estudiante';; 
+DELETE FROM `groups` WHERE name = 'Estudiante';; 
 
 DROP PROCEDURE IF EXISTS `delete_user`;;
 CREATE PROCEDURE `delete_user`(IN `name` varchar(45) CHARACTER SET 'utf8')
