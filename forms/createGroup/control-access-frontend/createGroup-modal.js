@@ -35,13 +35,6 @@ class CreateGroupForm extends HTMLElement
         this.createGroupButton.innerText = 'Create Group';
         this.createGroupButton.classList.add("w3-button", "w3-block", "w3-green", "w3-section", "w3-padding");
 
-        this.rememberInputCheckbox = document.createElement('input');
-        this.rememberInputCheckbox.type = 'checkbox';
-        this.rememberInputCheckbox.classList.add("w3-check", "w3-margin-top");
-        this.rememberInputCheckbox.placeholder = "Enter action";
-        this.rememberInputCheckbox.setAttribute('checked','checked');
-        this.rememberInputCheckbox.innerText = 'Remember me';
-
     }
 
     connectedCallback()
@@ -51,7 +44,6 @@ class CreateGroupForm extends HTMLElement
         this.createGroupForm.appendChild(this.actionLabel);
         this.createGroupForm.appendChild(this.actionInput);
         this.createGroupForm.appendChild(this.createGroupButton);
-        this.createGroupForm.appendChild(this.rememberInputCheckbox);
 
         this.container.appendChild(this.createGroupForm);
 

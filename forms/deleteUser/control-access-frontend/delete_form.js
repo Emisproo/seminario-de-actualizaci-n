@@ -26,13 +26,6 @@ class DeleteUserForm extends HTMLElement
         this.deleteUserButton.innerText = 'Delete User';
         this.deleteUserButton.classList.add("w3-button", "w3-block", "w3-green", "w3-section", "w3-padding");
 
-        this.rememberInputCheckbox = document.createElement('input');
-        this.rememberInputCheckbox.type = 'checkbox';
-        this.rememberInputCheckbox.classList.add("w3-check", "w3-margin-top");
-        this.rememberInputCheckbox.placeholder = "Enter action";
-        this.rememberInputCheckbox.setAttribute('checked','checked');
-        this.rememberInputCheckbox.innerText = 'Remember me';
-
     }
 
     connectedCallback()
@@ -41,7 +34,6 @@ class DeleteUserForm extends HTMLElement
         this.deleteUserForm.appendChild(this.UsernameInput);
     
         this.deleteUserForm.appendChild(this.deleteUserButton);
-        this.deleteUserForm.appendChild(this.rememberInputCheckbox);
 
         this.container.appendChild(this.deleteUserForm);
 

@@ -19,12 +19,12 @@ class LoginForm extends HTMLElement
         //this.loginForm.action = "/action_page.php";
 
         this.userNameLabel = document.createElement('label');
-        this.userNameLabel.innerText = 'Username';
+        this.userNameLabel.innerText = 'User Name';
         this.userNameLabel.style.fontWeight = 'bolder';
 
         this.userNameInput = document.createElement('input');
         this.userNameInput.classList.add("w3-input", "w3-border", "w3-margin-bottom");
-        this.userNameInput.placeholder = "Enter Username";
+        this.userNameInput.placeholder = "Enter User Name";
         this.userNameInput.setAttribute('required','true');
 
         this.passwordLabel = document.createElement('label');
@@ -36,6 +36,15 @@ class LoginForm extends HTMLElement
         this.passwordInput.classList.add("w3-input", "w3-border", "w3-margin-bottom");
         this.passwordInput.placeholder = "Enter Password";
         this.passwordInput.setAttribute('required','true');
+
+        this.groupLabel = document.createElement('label');
+        this.groupLabel.innerText = 'Add Group';
+        this.groupLabel.style.fontWeight = 'bold';
+        this.groupInput = document.createElement('input');
+        this.groupInput.classList.add("w3-input", "w3-border", "w3-margin-bottom");
+        this.groupInput.placeholder = "Add Group to User";
+        this.groupInput.setAttribute('required','true');
+
 
         this.loginButton = document.createElement('button');
         this.loginButton.innerText = 'Login';
@@ -56,6 +65,8 @@ class LoginForm extends HTMLElement
         this.loginForm.appendChild(this.userNameInput);
         this.loginForm.appendChild(this.passwordLabel);
         this.loginForm.appendChild(this.passwordInput);
+        this.loginForm.appendChild(this.groupLabel);
+        this.loginForm.appendChild(this.groupInput);
         this.loginForm.appendChild(this.loginButton);
         this.loginForm.appendChild(this.rememberInputCheckbox);
 

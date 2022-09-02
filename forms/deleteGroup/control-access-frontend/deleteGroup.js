@@ -26,13 +26,6 @@ class DeleteGroupForm extends HTMLElement
         this.deleteGroupButton.innerText = 'Delete Group';
         this.deleteGroupButton.classList.add("w3-button", "w3-block", "w3-green", "w3-section", "w3-padding");
 
-        this.rememberInputCheckbox = document.createElement('input');
-        this.rememberInputCheckbox.type = 'checkbox';
-        this.rememberInputCheckbox.classList.add("w3-check", "w3-margin-top");
-        this.rememberInputCheckbox.placeholder = "Enter action";
-        this.rememberInputCheckbox.setAttribute('checked','checked');
-        this.rememberInputCheckbox.innerText = 'Remember me';
-
     }
 
     connectedCallback()
@@ -41,7 +34,6 @@ class DeleteGroupForm extends HTMLElement
         this.deleteGroupForm.appendChild(this.groupnameInput);
     
         this.deleteGroupForm.appendChild(this.deleteGroupButton);
-        this.deleteGroupForm.appendChild(this.rememberInputCheckbox);
 
         this.container.appendChild(this.deleteGroupForm);
 
